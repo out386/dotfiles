@@ -1,0 +1,20 @@
+set tabsize 4
+set autoindent
+set mouse
+set nohelp
+set morespace
+set quickblank
+set smarthome
+set smooth
+set tabstospaces
+set wordbounds
+set linenumbers
+set wordbounds
+set titlecolor white,black
+set statuscolor white,black
+set numbercolor white,black
+bind M-M mark main
+bind ^C copytext main
+bind ^V uncut main
+bind M-9 cutwordleft main
+bind M-0 cutwordright main
