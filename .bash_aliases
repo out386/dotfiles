@@ -19,6 +19,13 @@ function nanof {
     nano $file
 }
 
+function search {
+	type -p pacman && pacman -Ss $1
+	type -p yum && yum search $1
+	type -p apt && apt-cache search $1
+	type -p zypper && zypper search $1
+}
+
 function grepf {
     echo -e "\n\n\n"
     local file=$(findf $2 $3)
@@ -45,15 +52,21 @@ function ebash {
     source $file
 }
 
-alias hsql='heroku pg:psql'
-alias hlog='heroku logs --source app'
-alias hlogt='heroku logs -t --source app'
+# alias hsql='heroku pg:psql'
+# alias hlog='heroku logs --source app'
+# alias hlogt='heroku logs -t --source app'
 
-alias acs='apt-cache search'
+# alias acs='apt-cache search'
 
-alias gadd='git add -A'
-alias gcp='git cherry-pick'
-alias gcmt='git commit'
-alias grb='git rebase -i'
-alias gstat='git status'
+# alias gadd='git add -A'
+# alias gcp='git cherry-pick'
+# alias gcmt='git commit'
+# alias grb='git rebase -i'
+# alias gstat='git status'
 
+# alias mkrb='echo "#!/usr/bin/ruby -w " >> main.rb ; nano main.rb'
+# alias bluetooth='sudo systemctl start bluetooth'
+
+alias c=clear
+alias nano='nano -wl'
+alias ls='ls -sahl --color=auto'
