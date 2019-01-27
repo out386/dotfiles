@@ -57,3 +57,4 @@ alias gcmt='git commit'
 alias grb='git rebase -i'
 alias gstat='git status'
 
+alias apktool='${HOME}/Android/apktool/apktool.sh'
