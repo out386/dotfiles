@@ -63,3 +63,9 @@ alias grb='git rebase -i'
 alias gstat='git status'
 
 alias apktool='${HOME}/Android/apktool/apktool.sh'
+
+alias ls='ls -C --color=auto'
+alias la='ls -A'
+alias ll='ls -al'
+
+alias c='clear'
