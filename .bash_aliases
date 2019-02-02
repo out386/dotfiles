@@ -43,7 +43,7 @@ function grpr {
 function ebash {
     if [ -z ${1+x} ]
     then
-        local file=$(eval echo ~/.bash_aliases)
+        local file="${HOME}/.bash_aliases"
     else
         local file=$1
     fi
