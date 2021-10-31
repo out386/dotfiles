@@ -69,3 +69,17 @@ alias la='ls -A'
 alias ll='ls -al'
 
 alias c='clear'
+
+function rpushpdir {
+    ssh-add /home/j/.ssh/id_rsa
+    if [[ ! -z $1 ]]
+    then
+        echo "Copying from $1 to $1. Continue?"
+        read
+        rsync --no-compress -W -aAXElHh --info=progress2 --delete -e 'ssh ' ~/$1/ user@10.10.0.2:~/$1/
+    else
+        local dir=$(pwd)
+        echo "Copying from $dir to $dir. Continue?"
+        read
+        rsync --no-compress -W -aAXElHh --info=progress2 --delete -e 'ssh ' $dir/ user@10.10.0.2:$dir/
+    fi
