@@ -83,3 +83,15 @@ function rpushpdir {
         read
         rsync --no-compress -W -aAXElHh --info=progress2 --delete -e 'ssh ' $dir/ user@10.10.0.2:$dir/
     fi
+
+function nanoc {
+    nano "$1.c"
+    gcc "$1.c" -lm
+    ./a.out
+}
+
+function nanoj {
+    nano "$1.java"
+    javac "$1.java"
+    java $1
+}
